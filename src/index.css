@@ -1,96 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Приэльбрусье 360 - Premium Mountain Design System */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Background & Foreground - Snow White theme */
+    --background: 210 30% 98%;
+    --foreground: 220 30% 15%;
 
+    /* Cards - Soft frosted glass effect */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 30% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 30% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Deep Mountain Blue */
+    --primary: 215 65% 25%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Warm Stone */
+    --secondary: 30 20% 92%;
+    --secondary-foreground: 220 30% 20%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted - Soft Grey Mountain Fog */
+    --muted: 210 15% 95%;
+    --muted-foreground: 215 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Golden Sunrise */
+    --accent: 35 90% 55%;
+    --accent-foreground: 220 30% 15%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Destructive */
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Borders & Inputs */
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 215 65% 35%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Custom Mountain Colors */
+    --mountain-blue: 215 65% 25%;
+    --mountain-blue-light: 215 55% 40%;
+    --snow-white: 210 30% 98%;
+    --sunrise-gold: 35 90% 55%;
+    --sunset-orange: 20 90% 55%;
+    --forest-green: 150 40% 30%;
+    --stone-grey: 30 10% 40%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Gradients */
+    --gradient-hero: linear-gradient(180deg, 
+      hsla(215, 65%, 15%, 0.7) 0%, 
+      hsla(215, 65%, 25%, 0.4) 50%,
+      hsla(35, 90%, 55%, 0.2) 100%);
+    --gradient-card: linear-gradient(135deg, 
+      hsla(0, 0%, 100%, 0.95) 0%, 
+      hsla(210, 30%, 98%, 0.9) 100%);
+    --gradient-accent: linear-gradient(135deg, 
+      hsl(35, 90%, 55%) 0%, 
+      hsl(20, 90%, 55%) 100%);
+    --gradient-mountain: linear-gradient(180deg,
+      hsl(215, 65%, 20%) 0%,
+      hsl(215, 55%, 35%) 100%);
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Shadows */
+    --shadow-card: 0 4px 20px -5px hsla(215, 65%, 25%, 0.15);
+    --shadow-elevated: 0 20px 40px -10px hsla(215, 65%, 25%, 0.2);
+    --shadow-glow: 0 0 40px hsla(35, 90%, 55%, 0.3);
 
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar */
+    --sidebar-background: 220 30% 12%;
+    --sidebar-foreground: 210 30% 95%;
+    --sidebar-primary: 35 90% 55%;
+    --sidebar-primary-foreground: 220 30% 15%;
+    --sidebar-accent: 215 45% 20%;
+    --sidebar-accent-foreground: 210 30% 95%;
+    --sidebar-border: 215 30% 20%;
+    --sidebar-ring: 35 90% 55%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 220 30% 8%;
+    --foreground: 210 30% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 30% 12%;
+    --card-foreground: 210 30% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 30% 12%;
+    --popover-foreground: 210 30% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 35 90% 55%;
+    --primary-foreground: 220 30% 10%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 215 30% 18%;
+    --secondary-foreground: 210 30% 95%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 215 30% 15%;
+    --muted-foreground: 215 20% 60%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 35 90% 55%;
+    --accent-foreground: 220 30% 10%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 215 30% 18%;
+    --input: 215 30% 18%;
+    --ring: 35 90% 55%;
+
+    --sidebar-background: 220 30% 6%;
+    --sidebar-foreground: 210 30% 95%;
+    --sidebar-primary: 35 90% 55%;
+    --sidebar-primary-foreground: 220 30% 10%;
+    --sidebar-accent: 215 45% 15%;
+    --sidebar-accent-foreground: 210 30% 95%;
+    --sidebar-border: 215 30% 15%;
+    --sidebar-ring: 35 90% 55%;
   }
 }
 
@@ -99,7 +131,177 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  /* Hero Button Styles */
+  .btn-hero {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 
+           bg-gradient-to-r from-accent to-sunset rounded-xl
+           text-primary font-semibold text-lg
+           shadow-lg shadow-accent/25
+           transition-all duration-300 ease-out
+           hover:shadow-xl hover:shadow-accent/35 hover:scale-105
+           active:scale-100;
+  }
+
+  .btn-hero-outline {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4
+           bg-white/10 backdrop-blur-sm border-2 border-white/30
+           text-white font-semibold text-lg rounded-xl
+           transition-all duration-300 ease-out
+           hover:bg-white/20 hover:border-white/50;
+  }
+
+  /* Glass Card */
+  .glass-card {
+    @apply bg-white/90 backdrop-blur-md border border-white/50
+           rounded-2xl shadow-card
+           transition-all duration-300 ease-out
+           hover:shadow-elevated hover:-translate-y-1;
+  }
+
+  /* Section Title */
+  .section-title {
+    @apply text-3xl md:text-4xl font-display font-bold text-primary
+           tracking-tight;
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-mountain-blue-light to-accent
+           bg-clip-text text-transparent;
+  }
+
+  /* WhatsApp Button */
+  .whatsapp-btn {
+    @apply inline-flex items-center gap-2 px-4 py-2
+           bg-[#25D366] text-white font-medium rounded-lg
+           transition-all duration-200
+           hover:bg-[#20BD5A] hover:shadow-lg;
+  }
+
+  /* Telegram Button */
+  .telegram-btn {
+    @apply inline-flex items-center gap-2 px-4 py-2
+           bg-[#0088CC] text-white font-medium rounded-lg
+           transition-all duration-200
+           hover:bg-[#0077B5] hover:shadow-lg;
+  }
+
+  /* Navigation Link */
+  .nav-link {
+    @apply px-4 py-2 text-white/90 font-medium
+           transition-all duration-200
+           hover:text-white hover:bg-white/10 rounded-lg;
+  }
+
+  /* Filter Chip */
+  .filter-chip {
+    @apply px-4 py-2 rounded-full text-sm font-medium
+           bg-secondary text-secondary-foreground
+           border border-transparent
+           transition-all duration-200 cursor-pointer
+           hover:bg-primary hover:text-primary-foreground;
+  }
+
+  .filter-chip-active {
+    @apply bg-primary text-primary-foreground
+           shadow-md;
+  }
+
+  /* Weather Widget */
+  .weather-widget {
+    @apply bg-gradient-to-br from-mountain-blue to-mountain-blue-light
+           text-white rounded-2xl p-6 shadow-elevated;
+  }
+
+  /* Camera Card */
+  .camera-card {
+    @apply rounded-2xl overflow-hidden bg-black/5
+           border border-border shadow-card;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-sans {
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Mountain specific colors */
+  .bg-mountain-blue {
+    background-color: hsl(215, 65%, 25%);
+  }
+
+  .bg-mountain-blue-light {
+    background-color: hsl(215, 55%, 40%);
+  }
+
+  .text-mountain-blue {
+    color: hsl(215, 65%, 25%);
+  }
+
+  .bg-sunrise-gold {
+    background-color: hsl(35, 90%, 55%);
+  }
+
+  .bg-sunset {
+    background-color: hsl(20, 90%, 55%);
+  }
+
+  .bg-forest-green {
+    background-color: hsl(150, 40%, 30%);
+  }
+
+  .bg-stone-grey {
+    background-color: hsl(30, 10%, 40%);
+  }
+
+  /* Animation utilities */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Hero overlay */
+  .hero-overlay {
+    background: linear-gradient(180deg, 
+      hsla(215, 65%, 15%, 0.6) 0%, 
+      hsla(215, 65%, 20%, 0.4) 40%,
+      hsla(20, 90%, 55%, 0.1) 100%);
   }
 }
