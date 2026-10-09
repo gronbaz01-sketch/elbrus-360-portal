@@ -6,14 +6,10 @@ import { supabase } from "@/integrations/supabase/client";
 import { Skeleton } from "@/components/ui/skeleton";
 
 const locationFilters = [
-  { value: "all", label: "Все посёлки" },
+  { value: "all", label: "Все" },
   { value: "terskol", label: "Терскол" },
-  { value: "cheget", label: "Чегет" },
   { value: "azau", label: "Азау" },
   { value: "baidaevo", label: "Байдаево" },
-  { value: "tyrnyauz", label: "Тырныауз" },
-  { value: "elbrus", label: "п. Эльбрус" },
-  { value: "bylym", label: "п. Былым" },
 ];
 
 interface Apartment {
@@ -27,7 +23,6 @@ interface Apartment {
   description: string | null;
   image_url: string | null;
   phone: string | null;
-  level: string | null;
 }
 
 const Apartments = () => {
@@ -104,7 +99,6 @@ const Apartments = () => {
                 guests={apt.guests ?? 2}
                 description={apt.description ?? undefined}
                 imageUrl={apt.image_url ?? undefined}
-                level={apt.level ?? undefined}
               />
             ))}
           </div>

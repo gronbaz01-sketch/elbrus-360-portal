@@ -7,7 +7,7 @@ interface SocialWidgetsProps {
 
 export const SocialWidgets = ({ variant = "hero" }: SocialWidgetsProps) => {
   const telegramUrl = "https://t.me/turmir_elbrus";
-  const whatsappUrl = "https://wa.me/79287150571?text=Здравствуйте! Хочу узнать подробнее об услугах Приэльбрусья.";
+  const whatsappUrl = "https://wa.me/79281234567?text=Здравствуйте! Хочу узнать подробнее об услугах Приэльбрусья.";
 
   if (variant === "floating") {
     return (

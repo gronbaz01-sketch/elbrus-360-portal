@@ -10,14 +10,7 @@ interface ApartmentCardProps {
   rating?: number;
   guests?: number;
   description?: string;
-  level?: string;
 }
-
-const LEVEL_LABEL: Record<string, string> = {
-  hotel: "Отель",
-  apartments: "Апартаменты",
-  guesthouse: "Гостевой дом",
-};
 
 export const ApartmentCard = ({
   id,
@@ -28,10 +21,9 @@ export const ApartmentCard = ({
   rating = 4.8,
   guests = 4,
   description,
-  level,
 }: ApartmentCardProps) => {
   const whatsappMessage = `Здравствуйте! Интересует квартира "${title}" в ${location}. Подскажите, есть ли свободные даты?`;
-  const whatsappUrl = `https://wa.me/79287150571?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappUrl = `https://wa.me/79281234567?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <div className="glass-card overflow-hidden group">
@@ -78,9 +70,6 @@ export const ApartmentCard = ({
             <Users className="w-4 h-4" />
             <span>до {guests} гостей</span>
           </div>
-          {level && LEVEL_LABEL[level] && (
-            <span className="px-2 py-0.5 bg-muted rounded-md text-xs">{LEVEL_LABEL[level]}</span>
-          )}
         </div>
 
         <div className="flex items-center justify-between pt-4 border-t border-border">

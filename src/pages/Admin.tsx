@@ -535,7 +535,7 @@ const Admin = () => {
                         </div>
                         <div>
                           <Label>Телефон</Label>
-                          <Input value={taxiForm.phone} onChange={(e) => setTaxiForm({ ...taxiForm, phone: e.target.value })} placeholder="+7 928 715-05-71" />
+                          <Input value={taxiForm.phone} onChange={(e) => setTaxiForm({ ...taxiForm, phone: e.target.value })} placeholder="+7 928 123-45-67" />
                         </div>
                         <div>
                           <Label>Описание услуг</Label>

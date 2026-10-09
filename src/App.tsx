@@ -9,7 +9,6 @@ import Apartments from "./pages/Apartments";
 import Cafes from "./pages/Cafes";
 import Taxi from "./pages/Taxi";
 import Cameras from "./pages/Cameras";
-import Submit from "./pages/Submit";
 import Auth from "./pages/Auth";
 import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
@@ -31,9 +30,6 @@ const App = () => (
             <Route path="/taxi" element={<Taxi />} />
             <Route path="/cameras" element={<Cameras />} />
           </Route>
-
-          {/* Submit page without header/footer (has its own layout) */}
-          <Route path="/submit" element={<Submit />} />
           
           {/* Auth pages without header/footer */}
           <Route path="/auth" element={<Auth />} />

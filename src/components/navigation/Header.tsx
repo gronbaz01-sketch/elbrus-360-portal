@@ -9,14 +9,10 @@ export const Header = () => {
 
   const navItems = [
     { to: "/", label: "Главная" },
-    { to: "/#budget", label: "Бюджет" },
     { to: "/apartments", label: "Жильё" },
     { to: "/cafes", label: "Кафе" },
     { to: "/taxi", label: "Такси" },
     { to: "/cameras", label: "Камеры" },
-    { to: "/#map", label: "Карта" },
-    { to: "/#faq", label: "Вопросы" },
-    { to: "/submit", label: "Разместить объявление" },
   ];
 
   return (
