@@ -4,6 +4,7 @@ import heroImage from "@/assets/hero-mountains.jpg";
 import { WeatherWidget } from "@/components/widgets/WeatherWidget";
 import { SocialWidgets } from "@/components/widgets/SocialWidgets";
 import { CameraCard } from "@/components/widgets/CameraCard";
+import { cameras } from "@/lib/cameras";
 
 const Index = () => {
   const services = [
@@ -30,11 +31,7 @@ const Index = () => {
     },
   ];
 
-  const cameras = [
-    { name: "Поляна Азау", description: "Подъёмник на Эльбрус, высота 2350 м" },
-    { name: "Станция Мир", description: "Панорама на высоте 3500 м" },
-    { name: "Поляна Чегет", description: "Вид на горнолыжные трассы" },
-  ];
+  const previewCameras = cameras.slice(0, 3);
 
   return (
     <div className="min-h-screen">
@@ -143,12 +140,8 @@ const Index = () => {
                 </Link>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {cameras.map((camera) => (
-                  <CameraCard
-                    key={camera.name}
-                    name={camera.name}
-                    description={camera.description}
-                  />
+                {previewCameras.map((camera) => (
+                  <CameraCard key={camera.id} camera={camera} />
                 ))}
               </div>
             </div>
