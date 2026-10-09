@@ -24,11 +24,9 @@ export type Database = {
           is_active: boolean | null
           location: string
           location_key: string
-          owner_id: string | null
           phone: string | null
           price: number
           rating: number | null
-          status: string
           title: string
           updated_at: string
         }
@@ -41,11 +39,9 @@ export type Database = {
           is_active?: boolean | null
           location: string
           location_key: string
-          owner_id?: string | null
           phone?: string | null
           price: number
           rating?: number | null
-          status?: string
           title: string
           updated_at?: string
         }
@@ -58,11 +54,9 @@ export type Database = {
           is_active?: boolean | null
           location?: string
           location_key?: string
-          owner_id?: string | null
           phone?: string | null
           price?: number
           rating?: number | null
-          status?: string
           title?: string
           updated_at?: string
         }
@@ -78,13 +72,10 @@ export type Database = {
           image_url: string | null
           is_active: boolean | null
           location: string
-          location_key: string
           name: string
-          owner_id: string | null
           phone: string | null
           price_range: string | null
           rating: number | null
-          status: string
           updated_at: string
         }
         Insert: {
@@ -96,13 +87,10 @@ export type Database = {
           image_url?: string | null
           is_active?: boolean | null
           location: string
-          location_key?: string
           name: string
-          owner_id?: string | null
           phone?: string | null
           price_range?: string | null
           rating?: number | null
-          status?: string
           updated_at?: string
         }
         Update: {
@@ -114,13 +102,10 @@ export type Database = {
           image_url?: string | null
           is_active?: boolean | null
           location?: string
-          location_key?: string
           name?: string
-          owner_id?: string | null
           phone?: string | null
           price_range?: string | null
           rating?: number | null
-          status?: string
           updated_at?: string
         }
         Relationships: []
@@ -158,12 +143,9 @@ export type Database = {
           description: string | null
           id: string
           is_active: boolean | null
-          location_key: string
           name: string
-          owner_id: string | null
           phone: string
           rating: number | null
-          status: string
           updated_at: string
           verified: boolean | null
         }
@@ -172,12 +154,9 @@ export type Database = {
           description?: string | null
           id?: string
           is_active?: boolean | null
-          location_key?: string
           name: string
-          owner_id?: string | null
           phone: string
           rating?: number | null
-          status?: string
           updated_at?: string
           verified?: boolean | null
         }
@@ -186,12 +165,9 @@ export type Database = {
           description?: string | null
           id?: string
           is_active?: boolean | null
-          location_key?: string
           name?: string
-          owner_id?: string | null
           phone?: string
           rating?: number | null
-          status?: string
           updated_at?: string
           verified?: boolean | null
         }

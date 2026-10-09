@@ -22,7 +22,7 @@ export const CafeCard = ({
   description,
 }: CafeCardProps) => {
   const whatsappMessage = `Здравствуйте! Хотел бы забронировать столик в кафе "${name}". Подскажите, есть ли свободные места?`;
-  const whatsappUrl = `https://wa.me/79281234567?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappUrl = `https://wa.me/79287150571?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <div className="glass-card overflow-hidden group">

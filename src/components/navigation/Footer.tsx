@@ -46,11 +46,23 @@ export const Footer = () => {
               </li>
               <li className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-accent" />
+                Поляна Чегет
+              </li>
+              <li className="flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-accent" />
                 Байдаево
               </li>
               <li className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-accent" />
-                Поляна Чегет
+                Тырныауз
+              </li>
+              <li className="flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-accent" />
+                п. Эльбрус
+              </li>
+              <li className="flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-accent" />
+                п. Былым
               </li>
             </ul>
           </div>
@@ -61,7 +73,7 @@ export const Footer = () => {
             <ul className="space-y-3 text-white/70">
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-accent" />
-                +7 (928) 123-45-67
+                +7 (928) 715-05-71
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-accent" />
