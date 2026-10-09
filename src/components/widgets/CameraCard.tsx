@@ -10,6 +10,40 @@ export const CameraCard = ({ camera }: CameraCardProps) => {
   // LIVE показываем только при подтверждённом воспроизведении
   const isLive = status === "live" && !!streamUrl;
 
+  const renderPlaceholder = () => {
+    if (status === "source") {
+      return (
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-muted-foreground px-4">
+          <AlertCircle className="w-12 h-12 mb-3 opacity-50" />
+          <p className="text-sm text-center mb-1">
+            Трансляция доступна на сайте источника
+          </p>
+          {sourceName && (
+            <p className="text-xs opacity-60 mb-3">Источник: {sourceName}</p>
+          )}
+          {sourceUrl && (
+            <a
+              href={sourceUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors"
+            >
+              <ExternalLink className="w-4 h-4" />
+              Смотреть на сайте источника
+            </a>
+          )}
+        </div>
+      );
+    }
+    return (
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-muted-foreground px-4">
+        <AlertCircle className="w-12 h-12 mb-3 opacity-50" />
+        <p className="text-sm text-center">Источник не подключён</p>
+        <p className="text-xs opacity-60 mt-1">Ожидается подключение потока</p>
+      </div>
+    );
+  };
+
   return (
     <div className="camera-card">
       <div className="aspect-video relative bg-gradient-to-br from-mountain-blue/10 to-mountain-blue/5">
@@ -24,36 +58,7 @@ export const CameraCard = ({ camera }: CameraCardProps) => {
             muted
           />
         ) : (
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-muted-foreground px-4">
-            <AlertCircle className="w-12 h-12 mb-3 opacity-50" />
-            {status === "source" ? (
-              <>
-                <p className="text-sm text-center mb-1">
-                  Трансляция доступна на сайте источника
-                </p>
-                {sourceName && (
-                  <p className="text-xs opacity-60 mb-3">Источник: {sourceName}</p>
-                )}
-                {sourceUrl && (
-                  <a
-                    href={sourceUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                    Смотреть на сайте источника
-                  </a>
-                </>
-              ) : (
-              <>
-                <p className="text-sm text-center">Источник не подключён</p>
-                <p className="text-xs opacity-60 mt-1">
-                  Ожидается подключение потока
-                </p>
-              </>
-            )}
-          </div>
+          renderPlaceholder()
         )}
 
         {/* Live indicator — только при подтверждённом потоке */}
